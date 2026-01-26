@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0F3D3E",
+        primary: "oklch(28.2% 0.091 267.935)",
         accent: "#F4A261",
         footer: "#0B2E2F",
       },

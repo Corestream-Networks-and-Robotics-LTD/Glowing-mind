@@ -1,4 +1,3 @@
-
 import {
   FaFacebookF,
   FaTwitter,
@@ -17,8 +16,9 @@ import {
   FaEnvelopeOpenText,
 } from "react-icons/fa";
 
-import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
+import logo from "../../assets/images/logo.png";
 
 import cert1 from "../../assets/images/certificates/cert1.png";
 import cert2 from "../../assets/images/certificates/cert2.png";
@@ -29,7 +29,6 @@ import cert5 from "../../assets/images/certificates/cert5.png";
 export default function Footer() {
   return (
     <footer className="bg-blue-950 text-white">
-      
       <div className="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-3">
         {/* LEFT COLUMN */}
         <div>
@@ -66,42 +65,54 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-gray-200">
             <li className="flex items-center gap-3">
               <FaHome className="text-accent" />
-              <a href="#" className="hover:text-accent">Home</a>
+              <Link to="/pages/home" className="hover:text-accent">Home</Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaInfoCircle className="text-accent" />
-              <a href="#" className="hover:text-accent">About</a>
+              <Link to="/about/identity" className="hover:text-accent">About</Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaUsers className="text-accent" />
-              <a href="#" className="hover:text-accent">Who We Are</a>
+              <Link to="/pages/who-we-are" className="hover:text-accent">
+                Who We Are
+              </Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaUsers className="text-accent" />
-              <a href="#" className="hover:text-accent">Our Team</a>
+              <Link to="/about/team" className="hover:text-accent">
+                Our Team
+              </Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaBullseye className="text-accent" />
-              <a href="#" className="hover:text-accent">SDGs Focus</a>
+              <Link to="/what-we-do/sdg-alignment" className="hover:text-accent">
+                SDGs Focus
+              </Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaBriefcase className="text-accent" />
-              <a href="#" className="hover:text-accent">Careers</a>
+              <Link to="/pages/careers" className="hover:text-accent">
+                Careers
+              </Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaBlog className="text-accent" />
-              <a href="#" className="hover:text-accent">Blog</a>
+              <Link to="/blog" className="hover:text-accent">
+                Blog
+              </Link>
             </li>
 
             <li className="flex items-center gap-3">
               <FaEnvelopeOpenText className="text-accent" />
-              <a href="#" className="hover:text-accent">Contact</a>
+              <Link to="/contact" className="hover:text-accent">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -154,7 +165,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* BOTTOM BAR */}
+      {/* BOTTOM FOOTER */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-300">
           © 2026 GMI. All rights reserved | Powered by CorestreamNG

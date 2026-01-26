@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroBg from "../../assets/images/hero-bg.jpg";
 
 export default function HeroSection() {
@@ -39,9 +40,12 @@ export default function HeroSection() {
             Join Us
           </button>
 
-          <button className="border border-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-black transition">
-            Donate
-          </button>
+       <Link to="/get-involved/donate">
+  <button className="border border-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-black transition">
+    Donate
+  </button>
+</Link>
+
         </motion.div>
       </div>
     </section>

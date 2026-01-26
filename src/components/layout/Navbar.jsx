@@ -55,10 +55,10 @@ export default function Navbar() {
             onOpen={() => setOpenMenu("whatwedo")}
             onClose={() => setOpenMenu(null)}
             items={[
-              { label: "Thematic Areas", to: "/WhatWeDo/thematic-areas" },
-              { label: "Approach & Methodology", to: "/WhatWeDo/approach-methodology" },
-              { label: "Core Competencies", to: "/WhatWeDo/core-competencies" },
-              { label: "SDG Alignment", to: "/WhatWeDo/sdg-alignment" },
+              { label: "Thematic Areas", to: "/what-we-do/thematic-areas" },
+              { label: "Approach & Methodology", to: "/what-we-do/approach-methodology" },
+              { label: "Core Competencies", to: "/what-we-do/core-competencies" },
+              { label: "SDG Alignment", to: "/what-we-do/sdg-alignment" },
             ]}
             arrow={<DropdownArrow />}
           />
@@ -82,7 +82,7 @@ export default function Navbar() {
 
           <Dropdown
             title="Impact & Resources"
-            open={openMenu === "impact"}
+            open={openMenu === "impact"}  
             onOpen={() => setOpenMenu("impact")}
             onClose={() => setOpenMenu(null)}
             items={[
