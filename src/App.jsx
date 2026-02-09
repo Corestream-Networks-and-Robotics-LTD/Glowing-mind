@@ -32,16 +32,27 @@ import GMIHub from "./pages/Programs/GMIHub";
 
 // IMPACT & RESOURCES
 import SuccessStories from "./pages/impact/success-stories";
-import KnowledgeProducts from "./pages/impact/Knowledge-Products";
+import KnowledgeProducts from "./pages/impact/knowledge-products";
 import GMINews from "./pages/impact/news";
-import AnnualEvents from "./pages/impact/Events";
-import Awards from "./pages/impact/Awards";
+import AnnualEvents from "./pages/impact/events";
+import Awards from "./pages/impact/awards";
+
+// MEDIA & RESOURCES 
+import TVFeatures from "./pages/media/TVFeatures";
+import RadioFeatures from "./pages/media/RadioFeatures";
+import Podcast from "./pages/media/Podcast";
+import NewspaperFeatures from "./pages/media/NewspaperFeatures";
+import PressReleaseFeatures from "./pages/media/PressReleaseFeatures";
+import Infographics from "./pages/media/Infographics";
+import EmailNewsletter from "./pages/media/EmailNewsletter";
+import VideoLibrary from "./pages/media/VideoLibrary";
+import PhotoGallery from "./pages/media/PhotoGallery";
 
 // TRANSPARENCY
-import LegalCompliance from "./pages/Transparency/LegalCompliance";
-import Policies from "./pages/Transparency/OrganizationalPolicies";
-import Partnerships from "./pages/Transparency/Partnerships";
-import FinancialHighlights from "./pages/Transparency/FinancialHighlights";
+import LegalCompliance from "./pages/transparency/LegalCompliance";
+import Policies from "./pages/transparency/OrganizationalPolicies";
+import Partnerships from "./pages/transparency/Partnerships";
+import FinancialHighlights from "./pages/transparency/FinancialHighlights";
 
 // GET INVOLVED
 import Donate from "./pages/get-involved/Donate";
@@ -51,7 +62,6 @@ import SIWES from "./pages/get-involved/SiwesNysc";
 import HireTalent from "./pages/get-involved/HireTalent";
 import Community from "./pages/get-involved/Community";
 import DonateForm from "./pages/get-involved/DonateForm";
-
 
 export default function App() {
   return (
@@ -92,6 +102,17 @@ export default function App() {
         <Route path="/impact/news" element={<GMINews />} />
         <Route path="/impact/events" element={<AnnualEvents />} />
         <Route path="/impact/awards" element={<Awards />} />
+
+        {/* MEDIA & RESOURCES */}
+        <Route path="/media/tv-features" element={<TVFeatures />} />
+        <Route path="/media/radio-features" element={<RadioFeatures />} />
+        <Route path="/media/podcast" element={<Podcast />} />
+        <Route path="/media/newspaper" element={<NewspaperFeatures />} />
+        <Route path="/media/press-releases" element={<PressReleaseFeatures />} />
+        <Route path="/media/infographics" element={<Infographics />} />
+        <Route path="/media/newsletter" element={<EmailNewsletter />} />
+        <Route path="/media/video-library" element={<VideoLibrary />} />
+        <Route path="/media/photo-gallery" element={<PhotoGallery />} />
 
         {/* TRANSPARENCY */}
         <Route path="/transparency/legal" element={<LegalCompliance />} />

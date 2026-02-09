@@ -1,27 +1,46 @@
 
+import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { page, fadeUp, stagger } from "../../animations/variants";
+import { PlayCircle, FileText, Share2 } from "lucide-react";
 import newsImg from "../../assets/images/impact/news.jpg";
 import Footer from "../../components/layout/Footer";
 
 export default function GMINews() {
-  const mediaChannels = [
+ const mediaChannels = [
     {
       category: "Broadcast Media",
-      items: ["TV Features", "Radio Features", "GMI TV – YouTube", "Podcasts"],
+      icon: <PlayCircle className="w-5 h-5" />,
+      items: [
+        { name: "TV – Features", link: "/media/tv-features", internal: true },
+        { name: "Radio Features", link: "/media/radio-features", internal: true },
+        {
+          name: "GMI TV – YouTube",
+          link: "https://www.youtube.com/@glowingmindsinitiatives",
+          internal: false,
+        },
+        { name: "Podcast", link: "/media/podcast", internal: true },
+      ],
     },
     {
       category: "Print & Digital Press",
+      icon: <FileText className="w-5 h-5" />,
       items: [
-        "National Newspaper Features",
-        "Press Release Publications",
-        "Blog Articles",
-        "Infographics",
+        { name: "Newspaper Features", link: "/media/newspaper", internal: true }, 
+        { name: "Press Release Features", link: "/media/press-releases", internal: true }, 
+        { name: "Blog", link: "/blog", internal: true },
+        { name: "Infographics", link: "/media/infographics", internal: true },
       ],
     },
     {
       category: "Direct Outreach",
-      items: ["Email Newsletters", "Video Library", "Photo Gallery"],
+      icon: <Share2 className="w-5 h-5" />,
+      items: [
+        { name: "Email Newsletter", link: "/media/newsletter", internal: true },
+        { name: "Video Library", link: "/media/video-library", internal: true }, 
+        { name: "Photo Gallery", link: "/media/photo-gallery", internal: true }, 
+      ],
     },
   ];
 
@@ -55,16 +74,43 @@ export default function GMINews() {
               className="grid md:grid-cols-3 gap-8"
             >
               {mediaChannels.map((channel, index) => (
-                <div key={index} className="space-y-4">
-                  <h2 className="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
-                    {channel.category}
-                  </h2>
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                >
+                  <div className="flex items-center space-x-3 mb-6 border-b border-primary/10 pb-3">
+                    <span className="text-primary">{channel.icon}</span>
+                    <h2 className="text-xl font-bold text-primary">
+                      {channel.category}
+                    </h2>
+                  </div>
 
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-4">
                     {channel.items.map((item, i) => (
-                      <li key={i} className="flex items-center">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                        {item}
+                      <li key={i}>
+                        {item.internal ? (
+                          <Link
+                            to={item.link}
+                            className="flex items-center group text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                          >
+                            <span className="w-2 h-2 bg-primary/40 group-hover:bg-primary rounded-full mr-3 transition-colors" />
+                            <span className="font-medium group-hover:underline decoration-blue-600 underline-offset-4">
+                              {item.name}
+                            </span>
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center group text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                          >
+                            <span className="w-2 h-2 bg-primary/40 group-hover:bg-primary rounded-full mr-3 transition-colors" />
+                            <span className="font-medium group-hover:underline decoration-blue-600 underline-offset-4">
+                              {item.name}
+                            </span>
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -74,7 +120,7 @@ export default function GMINews() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-12 text-gray-600 italic text-center"
+              className="mt-12 text-gray-600 italic text-center max-w-2xl mx-auto"
             >
               We drive organizational visibility, branding, and storytelling
               through digital media, publications, and strategic stakeholder

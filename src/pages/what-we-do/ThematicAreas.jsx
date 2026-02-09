@@ -55,7 +55,7 @@ const areas = [
 export default function ThematicAreas() {
   return (
     <div className="bg-slate-50 min-h-screen flex flex-col">
-      {/* HERO SECTION */}
+      {/* hero section*/}
       <section
         className="pt-40 pb-28 bg-cover bg-center relative"
         style={{ backgroundImage: `url(${hero})` }}
@@ -86,7 +86,7 @@ export default function ThematicAreas() {
         </div>
       </section>
 
-      {/* CONTENT SECTION */}
+      {/*content section */}
       <section className="py-24 flex-grow">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ export default function ThematicAreas() {
         </div>
       </section>
 
-      {/* FOOTER CALL-TO-ACTION */}
+      {/* footer call-to-action */}
       <section className="bg-blue-300 py-16 text-center text-white">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">Responsive Solutions for Global Challenges</h2>

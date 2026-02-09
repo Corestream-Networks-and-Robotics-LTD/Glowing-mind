@@ -63,52 +63,51 @@ export default function ProjectUmtazi() {
       </section>
 
       {/* KEY ACTIVITIES GRID */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">Our Strategic Pillars</h2>
-            <p className="text-gray-600 mt-4">A structured pathway from capacity building to market entry.</p>
-          </div>
-          
-          <motion.div 
-            variants={stagger} 
-            initial="hidden" 
-            whileInView="show" 
-            viewport={{ once: true }} 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {[
-              { 
-                title: "Capacity Building", 
-                desc: "Intensive training in personal development and leadership skills." 
-              },
-              { 
-                title: "The Pitching Stage", 
-                desc: "Developing the confidence to present ideas and secure support for community initiatives." 
-              },
-              { 
-                title: "Post-Training Support", 
-                desc: "Continued mentorship and guidance to ensure long-term success." 
-              },
-              { 
-                title: "Business Clinics", 
-                desc: "Hands-on advisory services and trade fair opportunities to test ideas in real markets." 
-              }
-            ].map((item, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeUp} 
-                whileHover={{ y: -5 }} 
-                className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-950"
-              >
-                <h4 className="font-bold text-blue-700 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
+     <section className="py-20 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-gray-900">Our Strategic Pillars</h2>
+      <p className="text-gray-600 mt-4">A structured pathway from capacity building to market entry.</p>
+    </div>
+    
+    <motion.div 
+      variants={stagger} 
+      initial="hidden" 
+      whileInView="show" 
+      viewport={{ once: true }} 
+      className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
+      {[
+        { 
+          title: "Capacity Building", 
+          desc: "Intensive training in personal development and leadership skills." 
+        },
+        { 
+          title: "The Pitching Stage", 
+          desc: "Developing the confidence to present ideas and secure support for community initiatives." 
+        },
+        { 
+          title: "Post-Training Support", 
+          desc: "Continued mentorship and guidance to ensure long-term success." 
+        },
+        { 
+          title: "Leadership Summit", 
+          desc: "A high-impact gathering for young females to engage with mentors and refine their leadership trajectories." 
+        }
+      ].map((item, i) => (
+        <motion.div 
+          key={i} 
+          variants={fadeUp} 
+          whileHover={{ y: -5 }} 
+          className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-950"
+        >
+          <h4 className="font-bold text-blue-700 mb-2">{item.title}</h4>
+          <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
       {/* SDG IMPACT */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">

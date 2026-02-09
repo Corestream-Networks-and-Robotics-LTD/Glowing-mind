@@ -10,7 +10,9 @@ import {
   Scale, 
   Zap, 
   Leaf, 
-  BookOpen 
+  BookOpen,
+  LineChart,
+  Briefcase
 } from "lucide-react";
 import Footer from "../../components/layout/Footer";
 import heroImage from "../../assets/images/why-we-exist-hero.jpg";
@@ -38,15 +40,15 @@ export default function WhyWeExist() {
           className="relative px-6 max-w-5xl space-y-6"
         >
           <div className="flex justify-center mb-4">
-             <Target className="w-12 h-12 text-blue-400" />
+              <Target className="w-12 h-12 text-blue-400" />
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
             Why Glowing Minds Initiatives Exists
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed text-blue-50 max-w-3xl mx-auto">
-            GMI is a youth-focused social enterprise established to address the critical mismatch between 
-            formal education and the evolving demands of the global labor market.
+            Addressing the persistent challenges of youth unemployment, underemployment, 
+            and limited access to skill development opportunities across Africa.
           </p>
         </motion.div>
       </div>
@@ -54,7 +56,32 @@ export default function WhyWeExist() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-20">
 
-        {/* The Core Problem */}
+        {/* Purpose and Problem Statement */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="space-y-8"
+        >
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl font-bold text-gray-900">Purpose and Problem Statement</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Glowing Minds Initiatives tackles gaps in workforce readiness, entrepreneurship support, 
+              and leadership training, ensuring young people are equipped to thrive economically and socially. 
+              It also combats the exclusion of women, persons with disabilities, and marginalized groups 
+              from opportunities and decision-making processes.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Additionally, the organisation responds to environmental challenges by promoting climate 
+              entrepreneurship and sustainable practices. Through policy advocacy, research, 
+              and stakeholder engagement, we influence systemic change, creating an enabling environment 
+              for youth empowerment and inclusive development.
+            </p>
+          </div>
+        </motion.section>
+
+        {/* The Core Problems with Supporting Data */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -64,61 +91,73 @@ export default function WhyWeExist() {
         >
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
-              <AlertCircle className="text-red-500" /> The Core Problem
+              <AlertCircle className="text-red-500" /> Key Labor & Social Challenges
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              Addressing systemic barriers that hinder the progress of African youth.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 text-gray-700">
-            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Youth Development */}
+            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <Briefcase className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Skills Mismatch</h3>
-              <p className="leading-relaxed">
-                Many graduates leave tertiary institutions without workplace readiness, digital literacy, 
-                or the entrepreneurial competencies required to thrive in a technology-driven economy.
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Youth Employability</h3>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li>• One in five unemployed Nigerian youths has been without work for more than five years.</li>
+                <li>• Skills mismatches between labour demand and supply is a key market challenge.</li>
+                <li>• Sub-Saharan Africa captures only 55% of its human capital due to unskilled workforces.</li>
+              </ul>
+            </div>
+
+            {/* Inclusion */}
+            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <Scale className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Inclusion & Equity</h3>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li>• 77.3% of young people with disabilities are unemployed.</li>
+                <li>• 79% of Nigerian women work in vulnerable, low-security, low-benefit jobs.</li>
+              </ul>
+            </div>
+
+            {/* Climate */}
+            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <Leaf className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Climate Sustainability</h3>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li>• Only 0.3% of total climate funding reaches youth-focused green initiatives.</li>
+                <li>• Youth participation in green innovation is less than 30% in most African countries.</li>
+              </ul>
+            </div>
+
+            {/* Governance */}
+            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Civic Engagement</h3>
+              <p className="text-sm text-gray-700">
+                Despite their numerical advantage, Nigerian youths occupy only 6% of elective and appointive offices.
               </p>
             </div>
 
-            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6">
-                <BookOpen className="w-6 h-6" />
+            {/* Community */}
+            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Economic Vulnerability</h3>
-              <p className="leading-relaxed">
-                The 2018 crisis at FUT Minna, where nearly 1,000 students deferred studies due to unpaid fees, 
-                underscored the urgent need for students to possess income-generating skills while studying.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6">
-                <Users className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Systemic Exclusion</h3>
-              <p className="leading-relaxed">
-                Women, persons with disabilities, and marginalized youth face disproportionate barriers 
-                to leadership participation and high-value economic opportunities.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6">
-                <Scale className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Policy Gaps</h3>
-              <p className="leading-relaxed">
-                Young people are often treated as passive policy beneficiaries. We exist to transform them into 
-                active co-creators of development policy and governance systems.
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Community Access</h3>
+              <p className="text-sm text-gray-700">
+                Up to 87% of youth in informal sectors find opportunities via social connections rather than formal channels.
               </p>
             </div>
           </div>
         </motion.section>
 
-        {/* Purpose & Mission Section */}
+        {/* Strategic Identity Section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -128,68 +167,38 @@ export default function WhyWeExist() {
         >
           <div className="relative z-10 space-y-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-400">
-              Purpose & Strategic Intent
+              Strategic Direction & Identity
             </h2>
 
-            <p className="text-xl text-slate-300 leading-relaxed max-w-4xl">
-              We bring deep expertise in youth employability and inclusive workforce development, 
-              driven by a commitment to unlocking the potential of Nigerian youth through 
-              global best practices and innovation.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-4">
-                <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Vision</div>
-                <p className="text-lg">An African Society where all Youths are employed and Self Reliant.</p>
-              </div>
-
-              <div className="space-y-4">
-                <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Mission</div>
-                <p className="text-lg">Empowering Youths with requisite knowledge while advocating for policies that foster self-reliance.</p>
+                <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Mandate</div>
+                <p className="text-lg leading-relaxed">
+                  Empowering African youth with skills, opportunities, and inclusive platforms while advocating for 
+                  youth-centered policies and advancing climate action.
+                </p>
               </div>
 
               <div className="space-y-4">
                 <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Theory of Change</div>
                 <p className="text-lg italic text-slate-400">
-                  "If youth are equipped with skills and a voice in governance, they will secure decent livelihoods 
-                  and drive sustainable development."
+                  "If young people are equipped with relevant skills, inclusive opportunities, supportive networks, 
+                  and a voice in policy, they will secure decent livelihoods and drive sustainable development".
                 </p>
               </div>
             </div>
-          </div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full -mr-20 -mt-20 blur-3xl" />
-        </motion.section>
 
-        {/* Strategic Impact Areas */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="space-y-12"
-        >
-          <div className="flex items-center gap-4">
-            <div className="h-px bg-blue-600 flex-grow" />
-            <h2 className="text-3xl font-bold text-gray-900">Strategic Impact Areas</h2>
-            <div className="h-px bg-blue-600 flex-grow" />
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Youth Development", icon: <Users className="text-blue-600" />, desc: "Workforce readiness and leadership training." },
-              { title: "Entrepreneurship", icon: <Lightbulb className="text-blue-600" />, desc: "Supporting campus entrepreneurs and green startups." },
-              { title: "Civic Engagement", icon: <Globe className="text-blue-600" />, desc: "Promoting youth-informed policy research." },
-              { title: "Climate Action", icon: <Leaf className="text-blue-600" />, desc: "Circular economy knowledge and green innovation." },
-              { title: "Social Inclusion", icon: <Scale className="text-blue-600" />, desc: "Advancing gender equality and PWD inclusion." }
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:bg-blue-50 transition-colors">
-                <div className="flex-shrink-0">{item.icon}</div>
-                <div>
-                  <h4 className="font-bold text-gray-900">{item.title}</h4>
-                  <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
-                </div>
+            <div className="grid md:grid-cols-2 gap-12 pt-8 border-t border-slate-800">
+              <div className="space-y-2">
+                <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Vision</div>
+                <p className="text-xl font-semibold">An African Society where all Youths are employed and Self Reliant.</p>
               </div>
-            ))}
+
+              <div className="space-y-2">
+                <div className="text-blue-400 font-bold uppercase tracking-widest text-sm">Mission</div>
+                <p className="text-xl font-semibold">Empowering Youths with requisite knowledge and Opportunities while advocating for policies that makes them Self Reliant.</p>
+              </div>
+            </div>
           </div>
         </motion.section>
       </div>

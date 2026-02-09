@@ -129,34 +129,7 @@ export default function Approach() {
         </div>
       </section>
 
-      {/* Fees Section */}
-      <section className="py-20 bg-white border-t">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white border-2 border-blue-100 rounded-3xl overflow-hidden shadow-xl">
-            <div className="bg-blue-600 p-8 text-center text-white">
-              <h2 className="text-2xl font-bold mb-2">Program Investment</h2>
-              <div className="text-4xl font-black">₦ 450,000</div>
-              <p className="opacity-90 mt-2">Per Training Program</p>
-            </div>
-            <div className="p-8 md:p-12">
-              <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
-                <Briefcase className="text-blue-600" />
-                This proposed fee covers:
-              </h4>
-              <ul className="space-y-4">
-                {feeInclusions.map((text, i) => (
-                  <li key={i} className="flex items-start gap-4 text-gray-700">
-                    <div className="mt-1 bg-green-100 p-1 rounded-full">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                    </div>
-                    {text}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </>

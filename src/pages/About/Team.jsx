@@ -11,10 +11,10 @@ import ibrahim from "../../assets/images/team/ibrahim-jimoh.jpg";
 
 
 import shamsudeen from "../../assets/images/team/shamsudeen-gidado.jpg";
-// import hamdalat from "../../assets/images/team/hamdalat-yusuf.jpg";
-// import abdulbasit from "../../assets/images/team/abdulbasit-abdulrazak.jpg";
-// import iradatullah from "../../assets/images/team/iradatullah-yakub.jpg";
-// import sakeenah from "../../assets/images/team/sakeenah-ibrahim.jpg";
+ import hamdalat from "../../assets/images/team/hamdalat-yusuf.jpg";
+ import abdulbasit from "../../assets/images/team/abdulbasit-abdulrazak.jpg";
+ import iradatullah from "../../assets/images/team/iradatullah-yakub.jpg";
+import sakeenah from "../../assets/images/team/sakeenah-ibrahim.jpg";
 
 export default function Team() {
   const [activeMember, setActiveMember] = useState(null);
@@ -42,10 +42,7 @@ His work focuses on empowering communities through sustainable programs, grant d
       name: "Mrs. Samirah Bello",
       role: "Board Member",
       image: samirah,
-      bio: `Samirah is a management and business professional with over seven years’ experience in agribusiness and eight years in community development. She currently leads partnerships at ThriveAgric, ensuring that agricultural value chains across Africa have access to operational and financial resources while creating sustainable impact through the SDG lens. Her work has empowered hundreds of thousands of smallholder farmers by improving access to finance, technology, and productivity through collaborations with national and international stakeholders.
-She also provides consulting services, serves on several NGO and youth organization boards, and has driven projects in education, children’s rights, domestic and sexual violence prevention, women and youth empowerment, and governance.
-Samirah holds a master’s degree in Globalisation, Business, and Development from the University of Sussex (distinction), and is a Chevening Scholar, Mandela Washington Fellow, One Young World Ambassador, and YALI RLC fellow. She is committed to generating social, economic, and environmental impact in business to drive sustainability and growth.
-`,
+      bio: `Samirah Bello is an agribusiness leader and the Head of Strategic Partnerships at ThriveAgric, where she drives multi-million-dollar collaborations supporting smallholder farmers across Nigeria, Kenya, and Ghana. A Chevening Scholar, Mandela Washington Fellow, and One Young World Ambassador, she brings over a decade of experience in development, gender inclusion, and agricultural innovation. Samirah holds a Master’s in Globalisation, Business & Development from the University of Sussex and is committed to advancing food security and climate-resilient farming systems across Africa.`,
     },
     {
       name: "Mr. Ibrahim Jimoh",
@@ -58,7 +55,7 @@ An active member of the British Computer Society, the Chartered Institute for IT
     },
     {
       name: "Mr. Shamsudeen Abdulrazak",
-      role: "Board Member",
+      role: "Board  Secretary",
       image: shamsudeen,
       bio: `SHAMSUDEEN ABDULRAZAK – EXECUTIVE DIRECTOR 
 Shamsudeen is a Social Entrepreneur and the Executive Director of Glowing Minds Initiatives for Human Development; a nonprofit dedicated to reducing unemployment and improving employability among young people, with a team passionate about making a positive impact on Employability, Climate Change, Gender Inclusion and Civic Engagement.
@@ -75,32 +72,35 @@ Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development
       image: shamsudeen, 
       bio: `Shamsudeen is a Social Entrepreneur and the Executive Director of Glowing Minds Initiatives for Human Development; a nonprofit dedicated to reducing unemployment and improving employability among young people, with a team passionate about making a positive impact on Employability, Climate Change, Gender Inclusion and Civic Engagement.
 Shamsudeen holds a Masters of Business Administration (Humanitarian) with specialization in Social Entrepreneurship from Roxbourg Institute of Social Entrepreneurship, Vaud Switzerland. A Bachelor degree in Library and Information Technology from Federal University of Technology, Minna. He is an Alumnus from Fate Foundation and a 2021 fellow of the Friedrich Ebert Stiftung Nigeria Open Minds Young Voices Network. He is 2021 Associate of Initiative for Revival and Sustainability - (IRSD).
-Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development, Communications, Media, Business Development and Organizational Development.
-`,
+Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development, Communications, Media, Business Development and Organizational Development.`,
     },
     {
       name: "Hamdalat Yusuf",
       role: "Operations Manager",
-      image: null, 
-      bio: `Bio for Hamdalat Yusuf goes here...`,
+      image: hamdalat, 
+      bio: `Hamdalat Ayoola Yusuf is the Head of Operations at Glowing Minds Initiatives for Human Development, where she plays a key role in driving organizational efficiency and program implementation. She is also a committed serial volunteer with a strong passion for community development and human-centered initiatives.`,
     },
     {
       name: "Abdulbasit Abdulrazak",
-      role: "HR Manager",
-      image: null,
-      bio: `Bio for Abdulbasit Abdulrazak goes here...`,
+      role: "Policy and Research Lead",
+      image: abdulbasit,
+      bio: `I am a research-driven pharmaceutical professional passionate about advancing Youth Development in Nigeria and Africa.
+
+Complementing my research background, I possess growing software engineering and digital innovation skills that support data-driven health solutions, with skills in web development (HTML, CSS, JavaScript), Git/GitHub, AI tools for research productivity, and graphic design for scientific communication and advocacy.
+
+Beyond research, I am committed to youth engagement, gender inclusion, and stakeholder-driven health advocacy. I am interested in collaborations that drive pharmaceutical innovation, digital health solutions, and equitable access to healthcare.`,
     },
     {
       name: "Iradatullah Yakub",
       role: "Communication Manager",
-      image: null,
-      bio: `Bio for Iradatullah Yakub goes here...`,
+      image: iradatullah,
+      bio: `Iradatullah Yakub is the Communication Lead and Content Strategist at Glowing Minds Initiatives, where she develops and manages Communication and content Strategy of the Organisation that supports accessible, inclusive, and impactful Youth Programming. Her work combines communication, digital storytelling, and Youth-centered approaches to amplify the organisation’s mission.`,
     },
     {
       name: "Sakeenah Ibrahim",
       role: "Program Manager",
-      image: null,
-      bio: `Bio for Sakeenah Ibrahim goes here...`,
+      image: sakeenah,
+      bio: `Sakeenah Ibrahim is the Program Manager at Glowing Minds Initiatives for Human Development, where she leads the design and implementation of youth-focused programs. She is passionate about creating sustainable development solutions that empower young people to become agents of change in their communities.`,
     },
   ];
 

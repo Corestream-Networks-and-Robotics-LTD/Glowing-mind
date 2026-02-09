@@ -67,31 +67,6 @@ export default function StudentEntrepreneurship() {
         </div>
       </section>
 
-      {/* KEY ACTIVITIES */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">Core Program Activities </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto mt-4" />
-          </div>
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Capacity Building", desc: "Intensive training in entrepreneurship and business development." },
-              { title: "The Pitching Stage", desc: "A platform for students to present business ideas and secure support." },
-              { title: "Post-Training Support", desc: "Continuous guidance for campus startups beyond the initial training." },
-              { title: "Business Clinics", desc: "Practical troubleshooting and expert advisory for student enterprises." },
-              { title: "Leadership Seminars", desc: "Integrating personal leadership with technological and agricultural innovation." },
-              { title: "Campus Trade Fairs", desc: "Real-world exposure to market dynamics and customer engagement." }
-            ].map((item, i) => (
-              <motion.div key={i} variants={fadeUp} whileHover={{ y: -6 }} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <h4 className="text-lg font-bold mb-3 text-blue-900">{item.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* METHODOLOGY */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
