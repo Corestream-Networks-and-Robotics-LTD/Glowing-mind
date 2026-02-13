@@ -14,27 +14,38 @@ const BlogCard = ({ blog }) => {
                  shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
     >
       <div>
+        {/* Category */}
         <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3 flex items-center gap-1">
-          <FaTag /> {blog.category}
+          <FaTag /> {blog.category || "General"}
         </p>
 
+        {/* Title */}
         <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-4">
           {blog.title}
         </h3>
 
+        {/* Meta */}
         <div className="flex flex-wrap gap-4 text-xs text-gray-500 mb-5">
-          <span className="flex items-center gap-1"><FaUser /> {blog.author}</span>
-          <span className="flex items-center gap-1"><FaCalendarAlt /> {blog.date}</span>
-          <span className="flex items-center gap-1"><FaClock /> {blog.time}</span>
+          <span className="flex items-center gap-1">
+            <FaUser /> {blog.author || "GMI Admin"}
+          </span>
+          <span className="flex items-center gap-1">
+            <FaCalendarAlt /> {blog.createdAt ? new Date(blog.createdAt).toLocaleDateString() : "Date TBD"}
+          </span>
+          <span className="flex items-center gap-1">
+            <FaClock /> 5 min read
+          </span>
         </div>
 
+        {/* Excerpt */}
         <p className="text-sm text-gray-700 leading-relaxed">
           {blog.excerpt}
         </p>
       </div>
 
+      {/* Link */}
       <Link
-        to={`/blog/${blog.slug}`}
+        to={`/blog/${blog._id}`}   
         className="mt-6 text-sm font-semibold text-brand-600 hover:text-blue-700 transition"
       >
         Read article →

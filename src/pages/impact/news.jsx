@@ -18,7 +18,7 @@ export default function GMINews() {
         {
           name: "GMI TV – YouTube",
           link: "https://www.youtube.com/@glowingmindsinitiatives",
-          internal: false,
+           internal: false,
         },
         { name: "Podcast", link: "/media/podcast", internal: true },
       ],
@@ -39,7 +39,7 @@ export default function GMINews() {
       items: [
         { name: "Email Newsletter", link: "/media/newsletter", internal: true },
         { name: "Video Library", link: "/media/video-library", internal: true }, 
-        { name: "Photo Gallery", link: "/media/photo-gallery", internal: true }, 
+        { name: "Photo Gallery", link: "https://www.flickr.com/photos/204223329@N06/", internal: true }, 
       ],
     },
   ];

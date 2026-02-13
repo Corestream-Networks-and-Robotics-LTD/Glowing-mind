@@ -9,7 +9,8 @@ import {
   Users, 
   Gavel, 
   CheckCircle2, 
-  Globe2 
+  Globe2,
+  Network // Added for the new section
 } from "lucide-react";
 import Footer from "../../components/layout/Footer";
 import hero from "../../assets/images/heroes/thematic-areas.jpg";
@@ -35,6 +36,14 @@ const areas = [
     description:
       "Empowering young people to lead climate solutions by building green skills and supporting climate entrepreneurship. We promote inclusive participation in sustainable development initiatives.",
     points: ["Green Skills", "Circular Economy", "Environmental Stewardship"]
+  },
+  // NEW THEMATIC AREA ADDED BELOW
+  {
+    title: "Community Building & Opportunities Sharing",
+    icon: <Network className="w-8 h-8 text-blue-600" />,
+    description:
+      "In many African contexts, up to 87% of youth in informal sectors find job opportunities via referrals and social connections. We strengthen collaborative platforms that facilitate peer learning, mentorship, and equitable access to funding and leadership.",
+    points: ["Youth Networks", "Mentorship & Collaboration", "Civic Opportunities Access"]
   },
   {
     title: "Gender Inclusion & Social Equity",
@@ -80,7 +89,7 @@ export default function ThematicAreas() {
             transition={{ delay: 0.2 }}
             className="max-w-3xl text-lg md:text-xl text-blue-100 leading-relaxed"
           >
-            GMI’s work is anchored on five strategic pillars that address the root causes of youth 
+            GMI’s work is anchored on six strategic pillars that address the root causes of youth 
             unemployment, systemic exclusion, and climate vulnerability across Africa.
           </motion.p>
         </div>
@@ -89,6 +98,7 @@ export default function ThematicAreas() {
       {/*content section */}
       <section className="py-24 flex-grow">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Changed grid to handle 6 items evenly (3 per row on desktop) */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {areas.map((area, index) => (
               <motion.div
@@ -133,13 +143,11 @@ export default function ThematicAreas() {
             measurable outcomes and sustainable impact.
           </p>
           <div className="flex justify-center gap-4">
-          
-
-       <Link to="/contact">
-  <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-500 transition-colors">
-    Contact-us
-  </button>
-</Link>
+            <Link to="/contact">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-500 transition-colors">
+                Contact-us
+              </button>
+            </Link>
           </div>
         </div>
       </section>

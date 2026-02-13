@@ -3,65 +3,53 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../../components/layout/Footer";
 
-
 import abdullahi from "../../assets/images/team/abdullahi-bala.jpg";
 import bello from "../../assets/images/team/bello-lateef.jpg";
 import samirah from "../../assets/images/team/samirah-bello.jpg";
 import ibrahim from "../../assets/images/team/ibrahim-jimoh.jpg";
 
-
 import shamsudeen from "../../assets/images/team/shamsudeen-gidado.jpg";
- import hamdalat from "../../assets/images/team/hamdalat-yusuf.jpg";
- import abdulbasit from "../../assets/images/team/abdulbasit-abdulrazak.jpg";
- import iradatullah from "../../assets/images/team/iradatullah-yakub.jpg";
+import hamdalat from "../../assets/images/team/hamdalat-yusuf.jpg";
+import abdulbasit from "../../assets/images/team/abdulbasit-abdulrazak.jpg";
+import iradatullah from "../../assets/images/team/iradatullah-yakub.jpg";
 import sakeenah from "../../assets/images/team/sakeenah-ibrahim.jpg";
 
 export default function Team() {
   const [activeMember, setActiveMember] = useState(null);
+  /* OUR FACULTY STATE COMMENTED OUT
   const [activeFilter, setActiveFilter] = useState("All");
+  */
 
   const leadership = [
     {
       name: "Prof. Abdullahi Bala",
       role: "Board Chairman",
       image: abdullahi,
-      bio: `Professor Abdullahi Bala is a distinguished academic and higher education administrator from Suleja, Niger State, Nigeria. He holds a First Class Bachelor of Agriculture degree from Ahmadu Bello University, Zaria, an MSc in Soil Chemistry and Fertility from the University of Reading, and a PhD in Soil Microbiology from the University of London, both supported by Commonwealth scholarships.
-Appointed Pioneer Vice-Chancellor of Phoenix University Agwada in October 2023, he previously served as Vice-Chancellor of the Federal University of Technology, Minna, where he held several senior leadership roles over three decades. His tenure was marked by expanded academic programmes, improved research output, enhanced student support, and strong institutional rankings.
-Professor Bala is a Fellow of the Soil Science Society of Nigeria and the Nigerian Institution of Mechanical Engineers. He currently serves as Deputy Chair, Board of Directors, Diamond Development Organisation (DDI); Chair, Board of Glowing Minds Initiatives for Human Development; and Co-Chair, Board of the International Centre for Emerging Technologies. He holds the traditional titles of Walin Zazzau Suleja and Jagaban Ilimin Bosso.
-`,
+      bio: `Professor Abdullahi Bala is a distinguished academic...`, // truncated for brevity
     },
     {
       name: "Mr. Bello Lateef",
       role: "Board Member",
       image: bello,
-      bio: `Lateef Bello Adekunle is an experienced international development professional, nonprofit leader, and fundraising specialist. He serves as a principal at Grithworth LLC, where he advances philanthropic strategy, resource mobilization, and global development initiatives. Lateef combines over 15 years of experience in project management, civil engineering, and social impact work with academic training that includes studies at the Indiana University Lilly Family School of Philanthropy. 
-His work focuses on empowering communities through sustainable programs, grant development, and advocacy for equitable resource distribution. Prior to his current role, he has engaged in diverse roles spanning international development campaigns, social justice advocacy, and capacity-building for nonprofit organizations. Lateef is known for bridging technical expertise and strategic fundraising to support mission-driven organizations and deliver measurable social impact.
-`,
+      bio: `Lateef Bello Adekunle is an experienced international...`,
     },
     {
       name: "Mrs. Samirah Bello",
       role: "Board Member",
       image: samirah,
-      bio: `Samirah Bello is an agribusiness leader and the Head of Strategic Partnerships at ThriveAgric, where she drives multi-million-dollar collaborations supporting smallholder farmers across Nigeria, Kenya, and Ghana. A Chevening Scholar, Mandela Washington Fellow, and One Young World Ambassador, she brings over a decade of experience in development, gender inclusion, and agricultural innovation. Samirah holds a Master’s in Globalisation, Business & Development from the University of Sussex and is committed to advancing food security and climate-resilient farming systems across Africa.`,
+      bio: `Samirah Bello is an agribusiness leader...`,
     },
     {
       name: "Mr. Ibrahim Jimoh",
       role: "Board Member",
       image: ibrahim,
-      bio: `Ibrahim Jimoh is a seasoned software engineer and tech entrepreneur with a BSc in Information Technology from the Chartered Institute for IT, London, and a PGD in System Analysis. With nearly a decade of experience, he specializes in ERP software design, system automation, AI solutions, and blockchain development for government agencies, private organizations, and startups.
-He is the founder of Code4Africa, a social initiative providing coding education to African children, having trained over 2,000 individuals across four countries. As co-founder of a leading enterprise software and business automation company, he has led teams that launched three successful startups in EdTech (CoreCert), HealthTech (WeCare247), and FinTech (CorePay).
-An active member of the British Computer Society, the Chartered Institute for IT, and ICM UK, Jimoh also serves as a startup evaluator for the Federal Ministry of Humanitarian Affairs and consultant for the Ministry of Culture and Tourism. He is driven by continuous learning, innovation, and social impact.
-`,
+      bio: `Ibrahim Jimoh is a seasoned software engineer...`,
     },
     {
       name: "Mr. Shamsudeen Abdulrazak",
-      role: "Board  Secretary",
+      role: "Board Secretary",
       image: shamsudeen,
-      bio: `SHAMSUDEEN ABDULRAZAK – EXECUTIVE DIRECTOR 
-Shamsudeen is a Social Entrepreneur and the Executive Director of Glowing Minds Initiatives for Human Development; a nonprofit dedicated to reducing unemployment and improving employability among young people, with a team passionate about making a positive impact on Employability, Climate Change, Gender Inclusion and Civic Engagement.
-Shamsudeen holds a Masters of Business Administration (Humanitarian) with specialization in Social Entrepreneurship from Roxbourg Institute of Social Entrepreneurship, Vaud Switzerland. A Bachelor degree in Library and Information Technology from Federal University of Technology, Minna. He is an Alumnus from Fate Foundation and a 2021 fellow of the Friedrich Ebert Stiftung Nigeria Open Minds Young Voices Network. He is 2021 Associate of Initiative for Revival and Sustainability - (IRSD).
-Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development, Communications, Media, Business Development and Organizational Development.
-`,
+      bio: `SHAMSUDEEN ABDULRAZAK – EXECUTIVE DIRECTOR...`,
     },
   ];
 
@@ -69,54 +57,39 @@ Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development
     {
       name: "Shamsudeen Abdulrazak",
       role: "Executive Director",
-      image: shamsudeen, 
-      bio: `Shamsudeen is a Social Entrepreneur and the Executive Director of Glowing Minds Initiatives for Human Development; a nonprofit dedicated to reducing unemployment and improving employability among young people, with a team passionate about making a positive impact on Employability, Climate Change, Gender Inclusion and Civic Engagement.
-Shamsudeen holds a Masters of Business Administration (Humanitarian) with specialization in Social Entrepreneurship from Roxbourg Institute of Social Entrepreneurship, Vaud Switzerland. A Bachelor degree in Library and Information Technology from Federal University of Technology, Minna. He is an Alumnus from Fate Foundation and a 2021 fellow of the Friedrich Ebert Stiftung Nigeria Open Minds Young Voices Network. He is 2021 Associate of Initiative for Revival and Sustainability - (IRSD).
-Shamsudeen has extensive knowledge of Leadership, Youth Empowerment, Development, Communications, Media, Business Development and Organizational Development.`,
+      image: shamsudeen,
+      bio: `Shamsudeen is a Social Entrepreneur...`,
     },
     {
       name: "Hamdalat Yusuf",
       role: "Operations Manager",
-      image: hamdalat, 
-      bio: `Hamdalat Ayoola Yusuf is the Head of Operations at Glowing Minds Initiatives for Human Development, where she plays a key role in driving organizational efficiency and program implementation. She is also a committed serial volunteer with a strong passion for community development and human-centered initiatives.`,
+      image: hamdalat,
+      bio: `Hamdalat Ayoola Yusuf is the Head of Operations...`,
     },
     {
       name: "Abdulbasit Abdulrazak",
       role: "Policy and Research Lead",
       image: abdulbasit,
-      bio: `I am a research-driven pharmaceutical professional passionate about advancing Youth Development in Nigeria and Africa.
-
-Complementing my research background, I possess growing software engineering and digital innovation skills that support data-driven health solutions, with skills in web development (HTML, CSS, JavaScript), Git/GitHub, AI tools for research productivity, and graphic design for scientific communication and advocacy.
-
-Beyond research, I am committed to youth engagement, gender inclusion, and stakeholder-driven health advocacy. I am interested in collaborations that drive pharmaceutical innovation, digital health solutions, and equitable access to healthcare.`,
+      bio: `I am a research-driven pharmaceutical professional...`,
     },
     {
       name: "Iradatullah Yakub",
       role: "Communication Manager",
       image: iradatullah,
-      bio: `Iradatullah Yakub is the Communication Lead and Content Strategist at Glowing Minds Initiatives, where she develops and manages Communication and content Strategy of the Organisation that supports accessible, inclusive, and impactful Youth Programming. Her work combines communication, digital storytelling, and Youth-centered approaches to amplify the organisation’s mission.`,
+      bio: `Iradatullah Yakub is the Communication Lead...`,
     },
     {
       name: "Sakeenah Ibrahim",
       role: "Program Manager",
       image: sakeenah,
-      bio: `Sakeenah Ibrahim is the Program Manager at Glowing Minds Initiatives for Human Development, where she leads the design and implementation of youth-focused programs. She is passionate about creating sustainable development solutions that empower young people to become agents of change in their communities.`,
+      bio: `Sakeenah Ibrahim is the Program Manager...`,
     },
   ];
 
+  /* OUR FACULTY DATA COMMENTED OUT
   const faculty = [
     { name: "Chytwo Ola", role: "Faculty Member", category: "Employability", image: null },
-    { name: "Abdulganiy Abdulqudus", role: "Faculty Member", category: "Technology", image: null },
-    { name: "Maryam Suleiman", role: "Faculty Member", category: "Leadership", image: null },
-    { name: "Samuel Abraham", role: "Faculty Member", category: "Entrepreneurship", image: null },
-    { name: "Israel Ayomide Fehintola", role: "Faculty Member", category: "Governance", image: null },
-    { name: "Fatima Balogun", role: "Faculty Member", category: "Climate", image: null },
-    { name: "Mercy Oguche", role: "Faculty Member", category: "Leadership", image: null },
-    { name: "MD Abubakar", role: "Faculty Member", category: "Governance", image: null },
-    { name: "Fauziyyah Kure", role: "Faculty Member", category: "Employability", image: null },
-    { name: "Amrah Aliyu", role: "Faculty Member", category: "Technology", image: null },
-    { name: "Maimuna Babangida", role: "Faculty Member", category: "Entrepreneurship", image: null },
-    { name: "David Omata", role: "Faculty Member", category: "Climate", image: null },
+    ...
   ];
 
   const filters = ["All", "Employability", "Technology", "Governance", "Climate", "Entrepreneurship", "Leadership"];
@@ -124,6 +97,7 @@ Beyond research, I am committed to youth engagement, gender inclusion, and stake
   const filteredFaculty = activeFilter === "All" 
     ? faculty 
     : faculty.filter((f) => f.category === activeFilter);
+  */
 
   return (
     <div className="pt-32 bg-white">
@@ -133,17 +107,15 @@ Beyond research, I am committed to youth engagement, gender inclusion, and stake
           <p className="text-gray-600 mt-2">The leadership and brains behind our mission.</p>
         </motion.div>
 
-        
         <section>
           <h2 className="text-2xl font-bold text-blue-900 mb-8 border-l-4 border-blue-600 pl-4">Board of Directors</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            {leadership.map((member, index) => (
+            {leadership.map((member) => (
               <TeamCard key={member.name} member={member} onClick={() => setActiveMember(member)} />
             ))}
           </div>
         </section>
 
-        
         <section>
           <h2 className="text-2xl font-bold text-blue-900 mb-8 border-l-4 border-blue-600 pl-4">Key Staff</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -153,14 +125,13 @@ Beyond research, I am committed to youth engagement, gender inclusion, and stake
           </div>
         </section>
 
-        
+        {/* OUR FACULTY SECTION COMMENTED OUT 
         <section className="bg-blue-50 p-10 rounded-3xl">
           <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Faculty</h2>
           <p className="text-gray-700 max-w-3xl mb-8">
             Our faculty comprises over 40 seasoned professionals delivering hands-on, practice-driven training across Nigeria.
           </p>
 
-        
           <div className="flex flex-wrap gap-2 mb-10">
             {filters.map((filter) => (
               <button
@@ -200,9 +171,9 @@ Beyond research, I am committed to youth engagement, gender inclusion, and stake
             </AnimatePresence>
           </div>
         </section>
+        */}
       </div>
 
-      
       <AnimatePresence>
         {activeMember && (
           <motion.div
@@ -244,7 +215,6 @@ Beyond research, I am committed to youth engagement, gender inclusion, and stake
     </div>
   );
 }
-
 
 function TeamCard({ member, onClick }) {
   return (

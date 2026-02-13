@@ -72,7 +72,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogList />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
 
         {/* ABOUT */}
         <Route path="/about/identity" element={<Identity />} />
